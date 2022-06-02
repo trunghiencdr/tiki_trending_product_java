@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_transperent"
+    app:cardCornerRadius="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_view_thumbnail_url"
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_background"></ImageView>
+
+            <LinearLayout
+                android:layout_alignStart="@id/image_view_thumbnail_url"
+                android:layout_alignEnd="@id/image_view_thumbnail_url"
+                android:layout_below="@id/image_view_thumbnail_url"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:ellipsize="end"
+                    android:id="@+id/text_view_name_product"
+                    style="@style/TextH3"
+                    android:minLines="2"
+                    android:maxLines="2"
+                    android:text="@string/app_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RatingBar
+                        android:id="@+id/rating_bar_product"
+
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:theme="@style/RatingBar"
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:rating="4.1">
+
+                    </RatingBar>
+
+                    <TextView
+                        android:layout_margin="2dp"
+                        android:background="#AFABAB"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent">
+
+                    </TextView>
+                    <TextView
+                        android:layout_gravity="center"
+                        style="@style/TextH4"
+                        android:id="@+id/txt_quantity_sold"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:minLines="1"
+                        android:maxLines="1"
+                        android:text="Đã bán 50+"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        tools:ignore="RtlCompat">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:ellipsize="end"
+                        android:id="@+id/text_view_price_product"
+                        style="@style/TextH2"
+                        android:text="19.0000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
